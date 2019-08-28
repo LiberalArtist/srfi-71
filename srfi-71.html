@@ -184,7 +184,7 @@ archive of SRFI 11</a> for details.
 Moreover, <code>let-values</code> suffers from "parenthesis complexity",
 despite Scheme programmers are tolerant to braces.
 <p>
-Eli Barzilay's <a href="#Eli">Swindle</a> library (for MzScheme) on 
+Eli Barzilay's <a href="#Swindle">Swindle</a> library (for MzScheme) on 
 the other hand redefines let to include multiple-values and internal
 procedures: The syntactic keyword <code>values</code> indicates the
 presence of multiple values, while additional parentheses (with the
@@ -486,7 +486,7 @@ reduce it into <code>lambda</code>
 <p>
 <i>PLT&nbsp;208:</i>
 The implementation found <a href="letvalues-plt.scm">here</a>
-uses <a href="#PLT">PLT</a>'s module system for exporting 
+uses PLT's module system for exporting 
 <code>srfi-let/*/rec</code>
 under the name of <code>let/*/rec</code>, while defining
 <code>r5rs-let/*/rec</code> as a copy of the built-in
@@ -522,7 +522,7 @@ http://schemers.org/Documents/Standards/R5RS/</a>.
 </tr>
 
 <tr>
-<td><a name="Eli">[Swindle]</a>
+<td><a name="Swindle">[Swindle]</a>
 <td>Eli Barzilay: Swindle, documentation for "base.ss" (Swindle Version 20040908.)
 <a href="http://www.cs.cornell.edu/eli/Swindle/base-doc.html#let">http://www.cs.cornell.edu/eli/Swindle/base-doc.html#let</a>
 </tr>
