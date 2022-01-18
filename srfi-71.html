@@ -195,7 +195,7 @@ I expect their compilation method (and <code>letrec*</code>)
 and this SRFI to be fully compatible with one another,
 although I have not checked this claim by way of implementation.
 
-<H1>Specification</H1>
+<H1 id="let">Specification</H1>
 
 The syntax of Scheme (<a href="#R5RS">R5RS</a>, Section 7.1.3.)
 is extended by replacing the existing production:
@@ -235,7 +235,7 @@ lambda-expression.
 The following procedures, specified in terms of standard procedures,
 are added to the set of standard procedures:
 <pre>
-(define (uncons pair)
+<span id="uncons">(define (uncons pair)</span>
   (values (car pair) (cdr pair)))
 
 (define (uncons-2 list)
@@ -247,13 +247,13 @@ are added to the set of standard procedures:
 (define (uncons-4 list)
   (values (car list) (cadr list) (caddr list) (cadddr list) (cddddr list)))
 
-(define (uncons-cons alist)
+<span id="uncons-cons">(define (uncons-cons alist)</span>
   (values (caar alist) (cdar alist) (cdr alist)))
 
-(define (unlist list)
+<span id="unlist">(define (unlist list)</span>
   (apply values list))
 
-(define (unvector vector)
+<span id="unvector">(define (unvector vector)</span>
   (apply values (vector->list vector)))
 </pre>
 These procedures decompose the standard concrete data structures
@@ -273,8 +273,8 @@ copy of <code>(cddr x)</code>.
 Finally, the following two macros are added to the standard macros:
 
 <pre>
-(values->list   &lt;expression&gt;)
-(values->vector &lt;expression&gt;)
+<span id="values2list">(values->list   &lt;expression&gt;)</span>
+<span id="values2vector">(values->vector &lt;expression&gt;)</span>
 </pre>
 
 These operation receive all values (if any) delivered by their 
@@ -471,7 +471,7 @@ reduce it into <code>lambda</code>
 <p>
 <i>PLT&nbsp;208:</i>
 The implementation found <a href="letvalues-plt.scm">here</a>
-uses PLT's module system for exporting 
+uses PLT's module system for exporting
 <code>srfi-let/*/rec</code>
 under the name of <code>let/*/rec</code>, while defining
 <code>r5rs-let/*/rec</code> as a copy of the built-in
