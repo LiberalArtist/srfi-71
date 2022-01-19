@@ -1,21 +1,20 @@
 <!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<html lang="en">
   <head>
     <title>SRFI 71: Extended LET-syntax for multiple values</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="/srfi.css" type="text/css" />
+    <link rel="stylesheet" href="https://srfi.schemers.org/srfi.css" type="text/css" />
+    <link href="/favicon.png" rel="icon" sizes="192x192" type="image/png">
   </head>
 
   <body>
 
-<H1>Title</H1>
+<h1><a href="https://srfi.schemers.org/"><img class="srfi-logo" src="https://srfi.schemers.org/srfi-logo.svg" alt="SRFI surfboard logo" /></a>71: Extended LET-syntax for multiple values</h1>
 
-Extended LET-syntax for multiple values
+<p>by <a href="mailto:sebastian.egner-AT-philips.com">Sebastian Egner</a></p>
 
-<H1>Author</H1>
-
-<a href="mailto:sebastian.egner-AT-philips.com">Sebastian Egner</a>
+<h2>Status</h2>
 
 <p>This SRFI is currently in <em>final</em> status.  Here is <a href="https://srfi.schemers.org/srfi-process.html">an explanation</a> of each status that a SRFI can hold.  To provide input on this SRFI, please send email to <code><a href="mailto:srfi+minus+71+at+srfi+dotschemers+dot+org">srfi-71@<span class="antispam">nospam</span>srfi.schemers.org</a></code>.  To subscribe to the list, follow <a href="https://srfi.schemers.org/srfi-list-subscribe.html">these instructions</a>.  You can access previous messages via the mailing list <a href="https://srfi-email.schemers.org/srfi-71">archive</a>.</p>
 <UL>
@@ -27,7 +26,7 @@ Extended LET-syntax for multiple values
 </UL>
 
 
-<H1>Abstract</H1>
+<h2>Abstract</h2>
 
 This SRFI is a proposal for extending <code>let</code>,
 <code>let*</code>, and <code>letrec</code>
@@ -106,7 +105,7 @@ construct a list (a vector, resp.) storing all values delivered
 by evaluating their argument expression.
 Note that these operations cannot be procedures.
 
-<H1>Rationale</H1>
+<h2>Rationale</h2>
 
 My original motivation for writing this SRFI is my unhappiness with
 the current state of affairs in Scheme with respect to multiple values.
@@ -195,7 +194,7 @@ I expect their compilation method (and <code>letrec*</code>)
 and this SRFI to be fully compatible with one another,
 although I have not checked this claim by way of implementation.
 
-<H1 id="let">Specification</H1>
+<h2 id="let">Specification</h2>
 
 The syntax of Scheme (<a href="#R5RS">R5RS</a>, Section 7.1.3.)
 is extended by replacing the existing production:
@@ -283,7 +282,7 @@ of these values.
 Note that <code>values->list</code> is <i>not</i> the same as 
 <code>list</code> (the procedure returning the list of its arguments).
 
-<H1>Design Rationale</H1>
+<h2>Design Rationale</h2>
 
 <h3>Which alternatives designs for the syntax were considered?</h3>
 
@@ -444,7 +443,7 @@ provided, and a decomposition operation expecting the
 first element to be a pair itself.
 These appear to be the most common cases.
 
-<H1>Implementation</H1>
+<h2>Implementation</h2>
 
 The reference implementation is written in <a href="#R5RS">R5RS</a> 
 using hygienic macros, only.
@@ -480,7 +479,7 @@ under the name of <code>let/*/rec</code>, while defining
 Examples using the new functionality
 can be found in <a href="examples.scm">examples.scm</a>.
 
-<H1>References</H1>
+<h2>References</h2>
 
 <table>
 
@@ -523,7 +522,7 @@ Recursive Binding Construct. To appear, 2005.
 </table>
 
 
-<H1>Copyright</H1>
+<h2>Copyright</h2>
 Copyright (c) 2005 Sebastian Egner.
 <p>
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the ``Software''), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
